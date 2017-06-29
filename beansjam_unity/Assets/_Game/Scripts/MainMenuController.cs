@@ -19,7 +19,9 @@ public class MainMenuController : MonoBehaviour {
     private bool switchToInGameMode = false;
 
     private float timeStep = 0;
-    private float switchDuration = 1;
+    private float startTime = 0;
+    private float switchSpeed = 0.125f;
+    private float duration = 3; // in seconds
 
 	// Use this for initialization
 	void Start () {
@@ -30,12 +32,24 @@ public class MainMenuController : MonoBehaviour {
 	void Update () {
 		if (switchToInGameMode && !inGameMode)
         {
-            float delta = Time.deltaTime;
-            timeStep += delta;
-            float progress = timeStep / switchDuration;
+            float progress = (Time.time - startTime) / duration;
+            float easeInOutCubic;
+            if (progress < 0.5f)
+            {
+                easeInOutCubic = 4 * progress * progress * progress;
+            } 
+            else
+            {
+                easeInOutCubic = (progress-1) * (2*progress-2) * (2*progress-2) + 1;
+            }
 
-            LerpTransform(player, playerInGamePosition, delta);
-            LerpTransform(camera, cameraInGamePosition, delta);
+            mainMenuUIGroup.alpha = 1 - (progress * 2f);
+
+            player.position = Vector3.Lerp(playerMenuPosition.position, playerInGamePosition.position, easeInOutCubic);
+            player.localEulerAngles = Vector3.Lerp(playerMenuPosition.localEulerAngles, playerInGamePosition.localEulerAngles, easeInOutCubic);
+            player.localScale = Vector3.Lerp(playerMenuPosition.localScale, playerInGamePosition.localScale, easeInOutCubic);
+            camera.position = Vector3.Lerp(cameraMenuPosition.position, cameraInGamePosition.position, easeInOutCubic);
+            camera.localEulerAngles = Vector3.Lerp(cameraMenuPosition.localEulerAngles, cameraInGamePosition.localEulerAngles, easeInOutCubic);
 
             // progress does not syncronize with the lerp.... have to check this.
             if (progress >= 1)
@@ -43,11 +57,8 @@ public class MainMenuController : MonoBehaviour {
                 switchToInGameMode = false;
                 inGameMode = true;
                 inMenuMode = false;
+                Debug.Log("Finished");
             }
-
-            Debug.Log(progress);
-
-            mainMenuUIGroup.alpha = 1- progress;
         }
 	}
 
@@ -61,5 +72,6 @@ public class MainMenuController : MonoBehaviour {
     public void startPlay()
     {
         switchToInGameMode = true;
+        startTime = Time.time;
     }
 }

@@ -504,22 +504,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 84cc3cd234dfc9d4d9d2e92c0eb0af75, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &627859669 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1858185244453104, guid: 27169d522f1ef44b3b73ad65c08e5fe6,
-    type: 2}
-  m_PrefabInternal: {fileID: 1086503883}
---- !u!114 &627859671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 627859669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd5a2de292a646bba95fc98a2085a72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &682563885 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1235517457631032, guid: 27169d522f1ef44b3b73ad65c08e5fe6,
@@ -664,7 +648,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 772470466}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243533612409447704, guid: a973898b452b74c74997ecac9ba407c1,
     type: 2}
@@ -1305,81 +1289,8 @@ Prefab:
       propertyPath: markerObject
       value: 
       objectReference: {fileID: 1738513179}
-    - target: {fileID: 1858185244453104, guid: 27169d522f1ef44b3b73ad65c08e5fe6, type: 2}
-      propertyPath: m_Name
-      value: Compass
-      objectReference: {fileID: 0}
-    - target: {fileID: 4511985672772176, guid: 27169d522f1ef44b3b73ad65c08e5fe6, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 5.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 4511985672772176, guid: 27169d522f1ef44b3b73ad65c08e5fe6, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4511985672772176, guid: 27169d522f1ef44b3b73ad65c08e5fe6, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4511985672772176, guid: 27169d522f1ef44b3b73ad65c08e5fe6, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 198127394779040898, guid: 27169d522f1ef44b3b73ad65c08e5fe6,
-        type: 2}
-      propertyPath: looping
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198127394779040898, guid: 27169d522f1ef44b3b73ad65c08e5fe6,
-        type: 2}
-      propertyPath: randomSeed
-      value: -843825582
-      objectReference: {fileID: 0}
-    - target: {fileID: 198263076494599682, guid: 27169d522f1ef44b3b73ad65c08e5fe6,
-        type: 2}
-      propertyPath: playOnAwake
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198263076494599682, guid: 27169d522f1ef44b3b73ad65c08e5fe6,
-        type: 2}
-      propertyPath: randomSeed
-      value: 1443812757
-      objectReference: {fileID: 0}
-    - target: {fileID: 198127394779040898, guid: 27169d522f1ef44b3b73ad65c08e5fe6,
-        type: 2}
-      propertyPath: playOnAwake
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1015615476981212, guid: 27169d522f1ef44b3b73ad65c08e5fe6, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 108904593869929518, guid: 27169d522f1ef44b3b73ad65c08e5fe6,
-        type: 2}
-      propertyPath: m_DrawHalo
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 108923785723878642, guid: 27169d522f1ef44b3b73ad65c08e5fe6,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 108923785723878642, guid: 27169d522f1ef44b3b73ad65c08e5fe6,
-        type: 2}
-      propertyPath: m_DrawHalo
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1858185244453104, guid: 27169d522f1ef44b3b73ad65c08e5fe6, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198263076494599682, guid: 27169d522f1ef44b3b73ad65c08e5fe6,
-        type: 2}
-      propertyPath: looping
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 114268303661026638, guid: 27169d522f1ef44b3b73ad65c08e5fe6, type: 2}
+    - {fileID: 114863406168652120, guid: 27169d522f1ef44b3b73ad65c08e5fe6, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 27169d522f1ef44b3b73ad65c08e5fe6, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1156086037
