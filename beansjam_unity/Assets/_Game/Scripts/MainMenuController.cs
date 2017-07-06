@@ -11,7 +11,7 @@ public class MainMenuController : MonoBehaviour {
 
     public CanvasGroup mainMenuUIGroup;
 
-    public Transform camera;
+    public Transform cameraObj;
     public Transform player;
 
     private bool inMenuMode = true;
@@ -25,7 +25,19 @@ public class MainMenuController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		if (player != null)
+        {
+            player.position = playerMenuPosition.position;
+            player.localEulerAngles = playerMenuPosition.localEulerAngles;
+            player.localScale = playerMenuPosition.localScale;
+        }
+
+        if (cameraObj != null)
+        {
+            cameraObj.position = cameraMenuPosition.position;
+            cameraObj.localEulerAngles = cameraMenuPosition.localEulerAngles;
+            cameraObj.localScale = cameraMenuPosition.localScale;
+        }
 	}
 	
 	// Update is called once per frame
@@ -48,8 +60,8 @@ public class MainMenuController : MonoBehaviour {
             player.position = Vector3.Lerp(playerMenuPosition.position, playerInGamePosition.position, easeInOutCubic);
             player.localEulerAngles = Vector3.Lerp(playerMenuPosition.localEulerAngles, playerInGamePosition.localEulerAngles, easeInOutCubic);
             player.localScale = Vector3.Lerp(playerMenuPosition.localScale, playerInGamePosition.localScale, easeInOutCubic);
-            camera.position = Vector3.Lerp(cameraMenuPosition.position, cameraInGamePosition.position, easeInOutCubic);
-            camera.localEulerAngles = Vector3.Lerp(cameraMenuPosition.localEulerAngles, cameraInGamePosition.localEulerAngles, easeInOutCubic);
+            cameraObj.position = Vector3.Lerp(cameraMenuPosition.position, cameraInGamePosition.position, easeInOutCubic);
+            cameraObj.localEulerAngles = Vector3.Lerp(cameraMenuPosition.localEulerAngles, cameraInGamePosition.localEulerAngles, easeInOutCubic);
 
             // progress does not syncronize with the lerp.... have to check this.
             if (progress >= 1)

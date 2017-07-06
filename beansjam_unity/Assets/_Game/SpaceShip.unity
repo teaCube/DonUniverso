@@ -156,7 +156,7 @@ MonoBehaviour:
   playerInGamePosition: {fileID: 1899855916}
   cameraInGamePosition: {fileID: 1079066543}
   mainMenuUIGroup: {fileID: 1014701372}
-  camera: {fileID: 919664818}
+  cameraObj: {fileID: 919664818}
   player: {fileID: 1360158958}
 --- !u!1001 &48894189
 Prefab:
@@ -1289,6 +1289,18 @@ Prefab:
       propertyPath: markerObject
       value: 
       objectReference: {fileID: 1738513179}
+    - target: {fileID: 4511985672772176, guid: 27169d522f1ef44b3b73ad65c08e5fe6, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511985672772176, guid: 27169d522f1ef44b3b73ad65c08e5fe6, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511985672772176, guid: 27169d522f1ef44b3b73ad65c08e5fe6, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114863406168652120, guid: 27169d522f1ef44b3b73ad65c08e5fe6, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 27169d522f1ef44b3b73ad65c08e5fe6, type: 2}
