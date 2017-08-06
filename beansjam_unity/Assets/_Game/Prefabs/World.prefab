@@ -110,6 +110,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6321f274d65f9465590f2345198c650f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  world: {fileID: 0}
+  HUD: {fileID: 0}
+  shopUI: {fileID: 0}
+  player: {fileID: 0}
   planetSpawner: {fileID: 0}
 --- !u!114 &114922155236112550
 MonoBehaviour:
@@ -138,10 +142,6 @@ MonoBehaviour:
   - {fileID: 151664, guid: fa49e460baf435b4780da7196c2ab473, type: 2}
   - {fileID: 141316, guid: 84cc3cd234dfc9d4d9d2e92c0eb0af75, type: 2}
   - {fileID: 130102, guid: 04d0bf4be9447154188d86f6e3b8dce9, type: 2}
-  range: 1000
-  maxLevel: 100
-  sizeMin: 0.3
-  sizeMax: 4
   PlanetColorArray:
   - {r: 0.78431374, g: 0.34509805, b: 0.34509805, a: 1}
   - {r: 0.627451, g: 0.22745098, b: 0.22745098, a: 1}
@@ -150,3 +150,10 @@ MonoBehaviour:
   - {r: 0.8509804, g: 0.8235294, b: 0.36078432, a: 1}
   - {r: 0.36862746, g: 0.60784316, b: 0.35686275, a: 1}
   - {r: 0.47058824, g: 0.7921569, b: 0.5254902, a: 1}
+  range: 1000
+  minLevel: 1
+  maxLevel: 100
+  sizeMin: 0.3
+  sizeMax: 4
+  sizeMinAsteroids: 0.5
+  sizeMaxAsteroids: 3

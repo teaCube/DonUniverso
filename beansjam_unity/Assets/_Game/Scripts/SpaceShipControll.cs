@@ -116,7 +116,6 @@ public class SpaceShipControll : MonoBehaviour
         if (other.gameObject.layer == LayerMask.NameToLayer("Home"))
             return;
 
-        Debug.Log("AUAAAAAAA!");
         health -= 15;
 
         // If player hs no health anymore.

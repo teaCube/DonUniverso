@@ -83,6 +83,10 @@ public class PlanetSpawner : MonoBehaviour {
 		} while (Physics.OverlapSphere(position, size*10).Length > 0);
 
 		// generate a name for the planet to spawn.
+        if (nameGenerator == null)
+        {
+            nameGenerator = new NameGenerator();
+        }
 		var name = nameGenerator.GenerateName();
 
 		// Create/instantiate the planet game object.

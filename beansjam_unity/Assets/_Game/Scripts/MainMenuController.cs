@@ -14,6 +14,10 @@ public class MainMenuController : MonoBehaviour {
     public Transform cameraObj;
     public Transform player;
 
+    public GameObject gameManager;
+
+    private Game gameScript;
+
     private bool inMenuMode = true;
     private bool inGameMode = false;
     private bool switchToInGameMode = false;
@@ -37,6 +41,11 @@ public class MainMenuController : MonoBehaviour {
             cameraObj.position = cameraMenuPosition.position;
             cameraObj.localEulerAngles = cameraMenuPosition.localEulerAngles;
             cameraObj.localScale = cameraMenuPosition.localScale;
+        }
+
+        if (gameManager != null)
+        {
+            gameScript = gameManager.GetComponent<Game>();
         }
 	}
 	
@@ -63,13 +72,13 @@ public class MainMenuController : MonoBehaviour {
             cameraObj.position = Vector3.Lerp(cameraMenuPosition.position, cameraInGamePosition.position, easeInOutCubic);
             cameraObj.localEulerAngles = Vector3.Lerp(cameraMenuPosition.localEulerAngles, cameraInGamePosition.localEulerAngles, easeInOutCubic);
 
-            // progress does not syncronize with the lerp.... have to check this.
             if (progress >= 1)
             {
                 switchToInGameMode = false;
                 inGameMode = true;
                 inMenuMode = false;
-                Debug.Log("Finished");
+                // Let the Games BEGIN!!!
+                gameScript.StartGame();
             }
         }
 	}
